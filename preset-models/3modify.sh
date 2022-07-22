@@ -15,9 +15,9 @@ cp -f uci-scripts/* files/etc/uci-defaults
 #复制内核5.10版本CPU超频补丁
 \cp -rf extra-files/322-mt7621-fix-cpu-clk-add-clkdev.patch target/linux/ramips/patches-5.10/322-mt7621-fix-cpu-clk-add-clkdev.patch
 #设置WIFI
-sed -i 's/OpenWrt/KEDU/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-sed -i 's/wireless.default_radio${devidx}.encryption=none/wireless.default_radio${devidx}.encryption=psk-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
-sed -i '/encryption/a\set wireless.default_radio${devidx}.key=Ilovekeke' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/OpenWrt/KEDU/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/wireless.default_radio${devidx}.encryption=none/wireless.default_radio${devidx}.encryption=psk-mixed/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i '/encryption/a\set wireless.default_radio${devidx}.key=Ilovekeke' package/kernel/mac80211/files/lib/wifi/mac80211.sh
 #修改登录密码为coolxiaomi
 #sed -i '/root/croot:$1$CBd7u73H$LvSDVXLBrzpk4JfuuN.Lv1:18676:0:99999:7:::' package/base-files/files/etc/shadow
 #切换ramips内核到5.15
